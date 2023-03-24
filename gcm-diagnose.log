@@ -1,0 +1,176 @@
+﻿Diagnose log at 2023-03-24T17:13:10Z
+
+AppPath: /usr/local/bin/git-credential-manager
+InstallDir: /usr/local/share/gcm-core/
+Version: 2.0.935+8b4735fc7b
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Linux
+OSVersion: Linux jose-Lenovo-ideapad-310-15ISK 5.15.0-60-generic #66-Ubuntu SMP Fri Jan 20 14:29:49 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+Reading environment variables... OK
+ Variables:
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+USER=jose
+PATH=/home/jose/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+GDM_LANG=pt_BR
+XDG_SESSION_DESKTOP=cinnamon
+GTK3_MODULES=xapp-gtk3-module
+XDG_RUNTIME_DIR=/run/user/1000
+GTK_MODULES=gail:atk-bridge
+QT_ACCESSIBILITY=1
+XDG_CURRENT_DESKTOP=X-Cinnamon
+HOME=/home/jose
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jose
+XDG_SESSION_TYPE=x11
+DISPLAY=:0
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/f256e205_6c35_45c8_bbe8_54d5e26503a4
+QT_QPA_PLATFORMTHEME=qt5ct
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+LIBVIRT_DEFAULT_URI=qemu:///system
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_SESSION_ID=c2
+DESKTOP_SESSION=cinnamon
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+OLDPWD=/home/jose/AndroidStudioProjects
+LANG=pt_BR.UTF-8
+GIT_TRACE2_PARENT_SID=fb77249c-8734-488c-9783-bf8b720eac79
+LOGNAME=jose
+GNOME_TERMINAL_SERVICE=:1.106
+GTK_OVERLAY_SCROLLING=1
+SHLVL=1
+TERM=xterm-256color
+SESSION_MANAGER=local/jose-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/2147,unix/jose-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/2147
+PWD=/home/jose/AndroidStudioProjects/RadioControl
+LESSCLOSE=/usr/bin/lesspipe %s %s
+CINNAMON_VERSION=5.6.7
+XDG_DATA_DIRS=/usr/share/cinnamon:/usr/share/gnome:/home/jose/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+SHELL=/bin/bash
+GDMSESSION=cinnamon
+LESSOPEN=| /usr/bin/lesspipe %s
+VTE_VERSION=6800
+XDG_VTNR=7
+LANGUAGE=pt_BR:pt:en
+XDG_CONFIG_DIRS=/etc/xdg/xdg-cinnamon:/etc/xdg
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+XDG_SEAT=seat0
+XDG_SESSION_CLASS=user
+COLORTERM=truecolor
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+XAUTHORITY=/home/jose/.Xauthority
+_=/usr/local/bin/git-credential-manager
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is '/tmp/'...
+Checking basic file I/O...
+Writing to temporary file '/tmp/faef408a88f6da28dd8b5550'... OK
+Reading from temporary file '/tmp/faef408a88f6da28dd8b5550'... OK
+Deleting temporary file '/tmp/faef408a88f6da28dd8b5550'... OK
+Testing IFileSystem instance...
+UserHomePath: /home/jose
+UserDataDirectoryPath: /home/jose/.gcm
+GetCurrentDirectory(): /home/jose/AndroidStudioProjects/RadioControl
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com... OK
+Sending HEAD request to https://example.com... OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:35319/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.34.1'
+Locating current repository... OK
+Git repository at '/home/jose/AndroidStudioProjects/RadioControl/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:/home/jose/.gitconfig	user.email=josegabriel.fagundesribeiro@gmail.com
+file:/home/jose/.gitconfig	user.name=José Gabriel
+file:/home/jose/.gitconfig	init.defaultbranch=main
+file:/home/jose/.gitconfig	credential.credentialstore=gpg
+file:/home/jose/.gitconfig	credential.helper=
+file:/home/jose/.gitconfig	credential.helper=/usr/local/bin/git-credential-manager
+file:/home/jose/.gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=true
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	remote.RadioControl.url=https://github.com/JFR-Gabriel/ESP32_RadioControl.git
+file:.git/config	remote.RadioControl.fetch=+refs/heads/*:refs/remotes/RadioControl/*
+file:.git/config	pull.rebase=false
+file:.git/config	credential.helper=!java -Ddebug=false -Djava.net.useSystemProxies=true -jar /home/example/git-credential-manager/git-credential-manager-2.0.4.jar
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: False
+Exception:
+System.Exception: Password store has not been initialized at '/home/jose/.password-store'; run `pass init <gpg-id>` to initialize the store.
+See https://aka.ms/gcm/credstores for more information.
+   at GitCredentialManager.CredentialStore.ValidateGpgPass(String& storeRoot, String& execPath)
+   at GitCredentialManager.CredentialStore.EnsureBackingStore()
+   at GitCredentialManager.CredentialStore.Remove(String service, String account)
+   at GitCredentialManager.Diagnostics.CredentialStoreDiagnostic.RunInternalAsync(StringBuilder log, IList`1 additionalFiles)
+   at GitCredentialManager.Diagnostics.Diagnostic.RunAsync()
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential...Deleting test credential...
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker not supported.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: /home/jose/.local/.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: /home/jose/.local/.IdentityService/msal.cache
+KeyringCollection: 
+KeyringSchemaName: 
+KeyringSecretLabel: 
+KeyringAttribute1: (,)
+KeyringAttribute2: (,)
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
