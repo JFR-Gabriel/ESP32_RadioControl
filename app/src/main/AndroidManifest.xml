@@ -12,8 +12,9 @@
         android:theme="@style/Theme.RadioControl"
         tools:targetApi="31">
         <activity
-            android:name=".SelectRadio"
-            android:exported="false" />
+            android:name=".SelectRadioActivity"
+            android:exported="false"
+            android:label="@string/label_select_radio"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
