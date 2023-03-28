@@ -32,8 +32,11 @@
         android:id="@+id/divider"
         android:layout_width="409dp"
         android:layout_height="1dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="@dimen/default_comp_margin"
         android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="-14dp"
-        tools:layout_editor_absoluteY="64dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
