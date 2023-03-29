@@ -13,13 +13,15 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    var station: String? = null
+    private var station: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        var view = binding.root
+        val view = binding.root
         setContentView(view)
+
+        // create a function for load data from internal memory
 
         if (savedInstanceState != null) {
             station = savedInstanceState.getString(EXTRA_STATION)
@@ -34,6 +36,26 @@ class MainActivity : AppCompatActivity() {
                 Log.d("MainActivity", station!!)
             }
         }
+
+        binding.btnSendConfigurations.setOnClickListener {
+            // listener of button 'send configurations'
+            /**
+             * Create a socket, get the radio station frequency
+             * and send this to the socket and wait the configuration
+             * of the ESP32
+             * */
+        }
+
+        binding.btnSaveToMemory.setOnClickListener {
+            /**
+             * Save all the configuration (last radio station used,
+             * ip address, port number, etc) into the memory
+             *
+             * */
+        }
+
+        // talves depois possibilitar ao usuario adicionar novas radios
+
     }
 
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {

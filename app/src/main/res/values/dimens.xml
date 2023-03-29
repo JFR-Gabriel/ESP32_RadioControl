@@ -2,4 +2,5 @@
 <resources>
     <dimen name="default_activity_padding">16dp</dimen>
     <dimen name="default_comp_margin">12dp</dimen>
+    <dimen name="large_comp_margin">32dp</dimen>
 </resources>

@@ -4,28 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="@dimen/default_activity_padding">
+    android:padding="@dimen/default_activity_padding"
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textview_station"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/label_estacao_atual"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/button_switch_station"
+        app:layout_constraintEnd_toStartOf="@+id/button_switch_station"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_switch_station"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/default_comp_margin"
         android:text="@string/label_switch_station"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textview_station"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
@@ -33,10 +33,85 @@
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="@dimen/default_comp_margin"
+        android:layout_marginTop="@dimen/large_comp_margin"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/button_switch_station" />
+
+    <TextView
+        android:id="@+id/textview_esp_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_comp_margin"
+        android:text="@string/label_esp32_configuration"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_comp_margin"
+        android:text="@string/label_end_ip"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_esp_status" />
+
+    <EditText
+        android:id="@+id/edt_end_ip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_comp_margin"
+        android:ems="10"
+        android:hint="@string/hint_end_ip"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_comp_margin"
+        android:text="@string/label_port_number"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_end_ip" />
+
+    <EditText
+        android:id="@+id/edt_port"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_comp_margin"
+        android:ems="10"
+        android:hint="@string/hint_port_number"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/btn_send_configurations"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_comp_margin"
+        android:text="@string/label_send_new_configuration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_port" />
+
+    <Button
+        android:id="@+id/btn_save_to_memory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_save_configurations_into_memory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_send_configurations" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

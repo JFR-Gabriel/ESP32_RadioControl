@@ -21,4 +21,13 @@
     <string name="label_estacao_atual">Estação atual - none</string>
     <string name="label_estacao_atual_dif">Estação atual %1$s</string>
     <string name="label_switch_station">Alterar estação</string>
+    <string name="label_esp32_configuration">Configurações do ESP32</string>
+    <string name="label_end_ip">Endereço IP:</string>
+    <string name="label_port_number">Porta do processo:</string>
+    <string name="label_status">Status: ----</string>
+    <string name="label_status_modif">Status: %1$s</string>
+    <string name="hint_end_ip">000.000.000.000</string>
+    <string name="hint_port_number">00000</string>
+    <string name="label_send_new_configuration">Enviar novas configurações</string>
+    <string name="label_save_configurations_into_memory">Salvar configurações na memória</string>
 </resources>
