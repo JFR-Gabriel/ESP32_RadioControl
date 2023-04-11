@@ -1,10 +1,12 @@
 package br.ufu.ip.radiocontrol
 
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import br.ufu.ip.radiocontrol.databinding.ActivityMainBinding
@@ -14,6 +16,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     private var station: String? = null
+
+    val register = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            result: ActivityResult ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            station = result.data?.getStringExtra(SelectRadioActivity.EXTRA_RESULT)
+            Log.d("MainActivity", station!!)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,12 +39,31 @@ class MainActivity : AppCompatActivity() {
                 Log.d("MainActivity", station!!)
             }
         }
-        val register = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            result: ActivityResult ->
-            if (result.resultCode == Activity.RESULT_OK) {
-                station = result.data?.getStringExtra(SelectRadioActivity.EXTRA_RESULT)
-                Log.d("MainActivity", station!!)
-            }
+
+        binding.btnAdd.setOnClickListener {
+            val name = binding.edtStationName.text.toString()
+            val freq = binding.edtFrequency.text.toString()
+            if (freq.isNotEmpty() && freq.isNotEmpty()) {
+
+            } else Toast.makeText(this,
+            resources.getString(R.string.warning_empty_fields), Toast.LENGTH_LONG).show()
+
+        }
+
+        binding.btnRemover.setOnClickListener {
+            /**
+             * Get the number (or the text) on the SelectRadioActivity
+             * and remove this
+             * Obs: Need make dynamic update of the content
+             */
+        }
+
+        binding.buttonSwitchStation.setOnClickListener {
+            /** create an intent with 'SelectRadioActivity' and add this into register
+             *  and launch this for start this activity
+            * */
+            var intent: Intent = Intent(this, SelectRadioActivity::class.java)
+            register.launch(intent)
         }
 
         binding.btnSendConfigurations.setOnClickListener {
@@ -53,8 +82,6 @@ class MainActivity : AppCompatActivity() {
              *
              * */
         }
-
-        // talves depois possibilitar ao usuario adicionar novas radios
 
     }
 

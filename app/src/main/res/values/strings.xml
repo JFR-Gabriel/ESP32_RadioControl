@@ -30,4 +30,11 @@
     <string name="hint_port_number">00000</string>
     <string name="label_send_new_configuration">Enviar novas configurações</string>
     <string name="label_save_configurations_into_memory">Salvar configurações na memória</string>
+    <string name="label_add_station">Adicionar Estação</string>
+    <string name="label_example_station">Ex: Rádio exemplo FM</string>
+    <string name="label_frequency_exxample">Ex: 108 MHz</string>
+    <string name="label_frequency">Frequência (MHz)</string>
+    <string name="label_add">Adicionar</string>
+    <string name="label_remove">Remover</string>
+    <string name="warning_empty_fields">Não é possível adicionar com campos vazios!</string>
 </resources>

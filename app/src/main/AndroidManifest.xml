@@ -14,7 +14,8 @@
         <activity
             android:name=".SelectRadioActivity"
             android:exported="false"
-            android:label="@string/label_select_radio"/>
+            android:label="@string/label_select_radio"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
