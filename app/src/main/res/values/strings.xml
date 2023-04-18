@@ -37,4 +37,5 @@
     <string name="label_add">Adicionar</string>
     <string name="label_remove">Remover</string>
     <string name="warning_empty_fields">Não é possível adicionar com campos vazios!</string>
+    <string name="text_station_send">Estação enviada!</string>
 </resources>

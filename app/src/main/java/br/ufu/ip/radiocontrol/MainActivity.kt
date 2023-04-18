@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import br.ufu.ip.radiocontrol.databinding.ActivityMainBinding
+import java.io.IOException
+import java.net.Socket
 
 class MainActivity : AppCompatActivity() {
 
@@ -73,6 +75,27 @@ class MainActivity : AppCompatActivity() {
              * and send this to the socket and wait the configuration
              * of the ESP32
              * */
+            var endIP = binding.edtEndIp.text.toString()
+            var portn = binding.edtPort.text.toString()
+            if (endIP.isNotEmpty() && portn.isNotEmpty()) {
+                try {
+                    var socket = Socket(endIP,Integer.parseInt(portn))
+                    var station_frequency = binding.textviewStation.text
+                        .split('-')[1].replace(" ","").substring(1,3)
+                    var datat = station_frequency.encodeToByteArray()
+                    socket.getOutputStream().write(datat);
+                    socket.getOutputStream().flush()
+                    socket.close()
+                    Toast.makeText(this, resources.getString(R.string.text_station_send),
+                        Toast.LENGTH_LONG).show()
+                }catch (e: IOException) {
+                    Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                } catch (s: SecurityException) {
+                    Toast.makeText(this, s.message, Toast.LENGTH_LONG).show()
+                } catch (i: IllegalArgumentException) {
+                    Toast.makeText(this, i.message, Toast.LENGTH_LONG).show()
+                }
+            }
         }
 
         binding.btnSaveToMemory.setOnClickListener {
