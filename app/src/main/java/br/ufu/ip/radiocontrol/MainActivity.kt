@@ -2,6 +2,7 @@ package br.ufu.ip.radiocontrol
 
 import android.app.Activity
 import android.content.Intent
+import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -10,6 +11,8 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import br.ufu.ip.radiocontrol.databinding.ActivityMainBinding
+import org.jsoup.Jsoup
+import org.jsoup.select.Elements
 import java.io.IOException
 import java.net.Socket
 
@@ -27,12 +30,41 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    inner class WebScratch : AsyncTask<Void, Void, Void>() {
+        private lateinit var words: String
+        override fun doInBackground(vararg params: Void): Void? {
+            try {
+                val document =  Jsoup.connect("https://www.radios.com.br/radio/cidade/uberlandia/9882").get()
+                for (element in document.getElementsByTag("h3")) {
+                    var text = element.text()
+                    var text_lower = text.lowercase()
+                    if (text_lower.length > 8) {
+                        var vl =  (text_lower.substring(
+                            text_lower.length - 8, text_lower.length - 2
+                        ))
+                        var clear_tx = vl.replace(" ", "")
+                        if (text_lower.contains("fm") && vl.contains(".")) {
+                            println(clear_tx)
+                        }
+                    }
+                }
+
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+            return null
+        }
+        override fun onPostExecute(aVoid: Void?) {
+            super.onPostExecute(aVoid)
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
+        WebScratch().execute()
         // create a function for load data from internal memory
 
         if (savedInstanceState != null) {
@@ -40,24 +72,6 @@ class MainActivity : AppCompatActivity() {
             if (station != null) {
                 Log.d("MainActivity", station!!)
             }
-        }
-
-        binding.btnAdd.setOnClickListener {
-            val name = binding.edtStationName.text.toString()
-            val freq = binding.edtFrequency.text.toString()
-            if (freq.isNotEmpty() && freq.isNotEmpty()) {
-
-            } else Toast.makeText(this,
-            resources.getString(R.string.warning_empty_fields), Toast.LENGTH_LONG).show()
-
-        }
-
-        binding.btnRemover.setOnClickListener {
-            /**
-             * Get the number (or the text) on the SelectRadioActivity
-             * and remove this
-             * Obs: Need make dynamic update of the content
-             */
         }
 
         binding.buttonSwitchStation.setOnClickListener {
