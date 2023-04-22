@@ -1,26 +1,9 @@
 <resources>
     <string name="app_name">RadioControl</string>
     <string name="label_select_radio">Selecione a estação</string>
-    <string-array name="radios">
-        <item>87.7 - Faixa comunitária / Uberlândia</item>
-        <item>89.7 - Bons Ventos FM / Araguari</item>
-        <item>90.9 - Educadora FM / Uberlândia</item>
-        <item>93.1 - Lider FM / Uberlândia</item>
-        <item>93.5 - Mais FM / Araguari</item>
-        <item>95.1 - Cultura FM / Uberlândia</item>
-        <item>97.7 - Rede Aleluia / Uberlândia</item>
-        <item>98.7 - Clube FM / Uberlândia</item>
-        <item>99.9 - Band FM / Uberlândia</item>
-        <item>100.7 - Paranaíba FM / Uberlândia</item>
-        <item>101.9 - DEUS é amor / Uberlândia</item>
-        <item>102.5 - Super Rede Boa Vontade / Uberlândia</item>
-        <item>105.5 - Radio Vitoriosa / Uberlândia</item>
-        <item>106.5 - Radio Mix FM / Uberlândia</item>
-        <item>107.5 - Universitária FM / Uberlândia</item>
-    </string-array>
     <string name="label_estacao_atual">Estação atual - none</string>
     <string name="label_estacao_atual_dif">Estação atual %1$s</string>
-    <string name="label_switch_station">Alterar estação</string>
+    <string name="label_send_station">Enviar</string>
     <string name="label_esp32_configuration">Configurações do ESP32</string>
     <string name="label_end_ip">Endereço IP:</string>
     <string name="label_port_number">Porta do processo:</string>

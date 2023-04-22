@@ -16,23 +16,7 @@ class SelectRadioActivity : AppCompatActivity() {
         var listView = ListView(this)
         setContentView(listView)
 
-        val radioList = resources.getStringArray(R.array.radios)
-        val listAdapter = ArrayAdapter(this,
-            android.R.layout.simple_list_item_single_choice, radioList)
-        listView.adapter = listAdapter
-        listView.choiceMode = AbsListView.CHOICE_MODE_SINGLE
-        val radio = intent.getStringExtra(EXTRA_STATION)
-        if (radio != null) {
-            val position = radioList.indexOf(radio)
-            listView.setItemChecked(position, true)
-        }
-        listView.setOnItemClickListener {l, _, position, _ ->
-            val result = l.getItemAtPosition(position) as String
-            val it = Intent()
-            it.putExtra(EXTRA_RESULT, result)
-            setResult(Activity.RESULT_OK, it)
-            finish()
-        }
+
     }
 
     companion object {
